@@ -1,18 +1,35 @@
 {
   "name": "nativescript-vue-vite",
-  "main": "src/app.ts",
+  "main": "/Users/vallemar/workspaces/test/nativescript-vue-vite/dist/assets/bundle/build.js",
+  "main__": "/Users/vallemar/workspaces/test/nativescript-vue-vite/platforms/android/app/src/main/assets/app/bundle.js",
+  "main_": "src/app.ts",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "PLATFORM=android vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "@nativescript/core": "~8.7.0",
-    "nativescript-vue": "3.0.0-rc.2"
+    "@nativescript/core": "~8.8.0",
+    "@rollup/plugin-dynamic-import-vars": "^2.1.5",
+    "nativescript-vue": "3.0.0-rc.2",
+    "vite-plugin-dynamic-import": "^1.6.0"
   },
   "devDependencies": {
+    "@nativescript/android": "8.8.6",
     "@nativescript/tailwind": "~2.1.0",
     "@nativescript/types": "~8.7.0",
     "@nativescript/webpack": "~5.0.0",
-    "@types/node": "~17.0.21",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@types/node": "^22.10.0",
+    "@vitejs/plugin-vue": "^5.2.1",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5"
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1",
+    "vite-plugin-commonjs": "^0.10.4",
+    "vite-plugin-require": "^1.2.14",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.1.10"
   }
 }
